@@ -1,0 +1,34 @@
+@import url("https://use.typekit.net/ldj2xti.css");
+
+ul {
+  width: 75vw;
+  margin: 4px;
+  padding: 4px;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2b4b00;
+  font-size: 2vw;
+  font-family: hobeaux, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+li {
+  margin-right: 25px;
+}
+
+body {
+  background-color: #fdf5e0;
+}
+
+figcaption {
+  font-family: hobeaux, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2vw;
+}

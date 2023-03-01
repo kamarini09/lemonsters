@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Lemonsters</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="assets.html"> Assets </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="screen">
+        <div id="game">
+          <div id="game_background">
+            <audio id="birds" src="sound/birds.mp3"></audio>
+          </div>
+
+          <div id="game_sprites">
+            <div id="lemon_container">
+              <div id="lemon"></div>
+            </div>
+            <div id="orange_container">
+              <div id="orange"></div>
+              <audio id="ahhnej" src="sound/nejshort.mp3"></audio>
+            </div>
+            <div id="watermellon_container">
+              <div id="watermellon"></div>
+              <audio id="ahhnej" src="sound/nejshort.mp3"></audio>
+            </div>
+            <div id="apple_container">
+              <div id="apple"></div>
+              <audio id="ahhnej" src="sound/nejshort.mp3"></audio>
+            </div>
+          </div>
+
+          <div id="foreground">
+            <div id="refresh"></div>
+            <div id="play" class="hidden"></div>
+            <div id="pause"></div>
+            <div id="sound_on" class="hidden"></div>
+            <div id="sound_off"></div>
+          </div>
+
+          <div id="game_ui">
+            <div id="score_board" class="point0"></div>
+            <div id="life_board" class="live3"></div>
+
+            <div id="time_board">
+              <div id="time_container">
+                <div id="time"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="instructions" class="hidden">
+          <p>
+            Ahh nej!! The monsters run out of lemonade while having a picnic.
+            <br />
+            &nbsp;&nbsp; Click seven &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; so you
+            can fill the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with
+            lemonade. <br />
+            Don't click
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            because you will lose a life
+            <br />
+            and you only have <br />
+
+            Do it before they eat the
+          </p>
+
+          <img class="lemon_rules" src="graphics/lemon1.png" alt="lemon" />
+          <img class="jug_rules" src="graphics/jug.png" alt="jug" />
+
+          <img
+            class="fruits_rules"
+            src="graphics/fruits.png"
+            alt="three fruits"
+          />
+          <img
+            class="lives_rules"
+            src="graphics/lives_rules.png"
+            alt="three glasses with lemonade"
+          />
+          <img class="bread" src="graphics/bread.png" alt="bread" />
+          <div id="play2_button"></div>
+        </div>
+
+        <div id="game_over" class="hidden">
+          <div id="play_again_game_over"></div>
+          <div id="exit_game_over"></div>
+          <audio id="nej" src="sound/nej.mp3"></audio>
+        </div>
+
+        <div id="you_won" class="hidden">
+          <div id="play_again_you_won"></div>
+          <div id="exit_you_won"></div>
+          <audio id="yeeey" src="sound/Yeeeeyy.mp3"></audio>
+        </div>
+
+        <div id="title_screen" class="hidden">
+          <div id="play_button"></div>
+          <div id="rules_button"></div>
+        </div>
+      </section>
+      <aside><p>Help the monsters!</p></aside>
+    </main>
+    <script src="js/firstversion.js"></script>
+    <footer>
+      <p>"lemonsters", a game by Kamarini Moragianni - MMD 2022 KEA</p>
+    </footer>
+  </body>
+</html>

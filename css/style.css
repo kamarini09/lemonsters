@@ -1,0 +1,681 @@
+@import url("https://use.typekit.net/ldj2xti.css");
+
+body {
+  background-color: #fdf5e0;
+}
+
+ul {
+  width: 75vw;
+  margin: 4px;
+  padding: 4px;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+li {
+  margin-right: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #2b4b00;
+  font-size: 2vw;
+  font-family: hobeaux, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+p {
+  text-decoration: none;
+  color: #2b4b00;
+  font-size: 2vw;
+  font-family: hobeaux, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 7vw;
+  line-height: 4vw;
+}
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "game info";
+  grid-gap: 1vw;
+  grid-template-columns: 80% 10%;
+}
+
+aside {
+  margin-left: 1vw;
+  margin-left: 1vw;
+}
+
+#screen {
+  position: relative;
+  grid-area: game;
+  width: 87%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+#game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#game_background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../graphics/play_screen.svg);
+  background-size: 100%;
+  pointer-events: none;
+}
+#foreground {
+  position: absolute;
+  aspect-ratio: 16/1;
+  width: 20%;
+  height: 50%;
+  left: 80%;
+  top: 0%;
+  pointer-events: none;
+}
+
+#refresh {
+  position: absolute;
+  background-image: url(../graphics/restart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  left: 35%;
+  top: 2%;
+  pointer-events: all;
+}
+
+#play {
+  position: absolute;
+  background-image: url(../graphics/start.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  left: 7%;
+  top: 2%;
+  pointer-events: all;
+}
+#pause {
+  position: absolute;
+  background-image: url(../graphics/pause.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  left: 7%;
+  top: 2%;
+  pointer-events: all;
+}
+#sound_on {
+  position: absolute;
+  background-image: url(../graphics/sound_on.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  left: 65%;
+  top: 2%;
+  pointer-events: all;
+}
+#sound_off {
+  position: absolute;
+  background-image: url(../graphics/sound_off.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 20%;
+  left: 65%;
+  top: 2%;
+  pointer-events: all;
+}
+
+#title_screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../graphics/welcomepage.svg);
+  background-size: 100%;
+  pointer-events: none;
+}
+#play_button {
+  position: absolute;
+  background-image: url(../graphics/play_botton.svg);
+  background-size: contain;
+  width: 25%;
+  height: 20%;
+  left: 20%;
+  top: 76%;
+  pointer-events: all;
+}
+#rules_button {
+  position: absolute;
+  background-image: url(../graphics/rules_button.svg);
+  background-size: contain;
+  width: 25%;
+  height: 20%;
+  left: 54%;
+  top: 75%;
+  pointer-events: all;
+}
+
+#game_sprites {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 40%;
+  left: 50%;
+  top: 15%;
+}
+#lemon_container {
+  position: absolute;
+  width: 30%;
+  height: 31.5%;
+}
+#lemon {
+  background-image: url(../graphics/lemon.svg);
+  background-size: cover;
+  width: 80%;
+  height: 84%;
+}
+
+#watermellon_container {
+  position: absolute;
+  width: 22%;
+  height: 11%;
+}
+
+#watermellon {
+  background-image: url(../graphics/watermellon.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+#orange_container {
+  position: absolute;
+  width: 20%;
+  height: 22%;
+}
+
+#orange {
+  background-image: url(../graphics/orange.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#apple_container {
+  position: absolute;
+  width: 20%;
+  height: 21%;
+}
+
+#apple {
+  background-image: url(../graphics/apple.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#game_ui {
+  position: absolute;
+  aspect-ratio: 16/1;
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  top: 0%;
+  pointer-events: none;
+}
+
+#life_board {
+  position: absolute;
+
+  top: 2%;
+  left: 17%;
+  width: 12%;
+  height: 90%;
+}
+
+#time_board {
+  position: absolute;
+  aspect-ratio: 16/1;
+  top: 5%;
+  left: 35%;
+  width: 30%;
+  height: 60%;
+}
+#game_over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../graphics/gameover_1.svg);
+  background-size: 100%;
+  pointer-events: none;
+}
+
+#play_again_game_over {
+  background-image: url(../graphics/play_again.svg);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35%;
+  height: 30%;
+  left: 45%;
+  top: 70%;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+#exit_game_over {
+  background-image: url(../graphics/exit.svg);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 10%;
+  left: 92%;
+  top: 3%;
+  pointer-events: all;
+}
+#you_won {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../graphics/you_won_1.svg);
+  background-size: 100%;
+  pointer-events: none;
+}
+
+#play_again_you_won {
+  background-image: url(../graphics/play_again.svg);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35%;
+  height: 30%;
+  left: 45%;
+  top: 70%;
+  pointer-events: all;
+}
+
+#exit_you_won {
+  background-image: url(../graphics/exit.svg);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 10%;
+  left: 92%;
+  top: 3%;
+  pointer-events: all;
+}
+
+#instructions {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../graphics/rules_2.svg);
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#play2_button {
+  position: absolute;
+  background-image: url(../graphics/play_rules.svg);
+  background-size: contain;
+  width: 25%;
+  height: 20%;
+  left: 45%;
+  top: 71%;
+  pointer-events: all;
+}
+
+.lemon_rules {
+  position: absolute;
+  max-width: 3%;
+  max-height: auto;
+  left: 33%;
+  bottom: 61%;
+}
+
+.jug_rules {
+  position: absolute;
+  max-width: 6%;
+  max-height: auto;
+  left: 59%;
+  bottom: 59%;
+}
+
+.fruits_rules {
+  position: absolute;
+  max-width: 15%;
+  max-height: auto;
+  left: 34%;
+  bottom: 52%;
+}
+.lives_rules {
+  position: absolute;
+  max-width: 10%;
+  max-height: auto;
+  left: 62%;
+  bottom: 42%;
+}
+
+.bread {
+  position: absolute;
+  max-width: 10%;
+  max-height: auto;
+  left: 65%;
+  bottom: 34%;
+}
+/* animations */
+
+.zoom_out {
+  animation: zoom_out 1s infinite;
+}
+
+@keyframes zoom_out {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.pattern {
+  animation: pattern 4s infinite;
+}
+
+@keyframes pattern {
+  0% {
+    transform: translateX(0%) translateY(0%);
+  }
+  25% {
+    transform: translateX(0%) translateY(53%);
+  }
+  50% {
+    transform: translateX(30%) translateY(50%);
+  }
+  75% {
+    transform: translateX(45%) translateY(0%);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%);
+  }
+}
+
+.glow {
+  animation: glow 0.5s infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    filter: brightness(100%) drop-shadow(0 0 -1px yellow);
+  }
+  50% {
+    filter: brightness(200%) drop-shadow(0 0 10px yellow);
+  }
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1.8);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+.pulse2 {
+  animation: pulse2 0.5s infinite;
+}
+
+@keyframes pulse2 {
+  from {
+    transform: scale(1.8);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+.rotation {
+  animation: rotation 0.5s infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotation2 {
+  animation: rotation2 3s infinite;
+}
+
+@keyframes rotation2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade_out {
+  animation: fade_out 1.5s infinite;
+}
+
+@keyframes fade_out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.stop {
+  animation-play-state: paused;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* -------------positions---------- */
+.pos1 {
+  left: 10%;
+  top: 30%;
+}
+.pos2 {
+  left: 25%;
+  top: 3%;
+}
+.pos3 {
+  left: 30%;
+  top: 65%;
+}
+.pos4 {
+  left: 4%;
+  top: 50%;
+}
+.pos5 {
+  left: 80%;
+  top: 35%;
+}
+.pos6 {
+  left: 10%;
+  top: 30%;
+}
+.pos7 {
+  left: 70%;
+  top: 60%;
+}
+.pos8 {
+  left: 1%;
+  top: 20%;
+}
+.pos9 {
+  left: 15%;
+  top: 5%;
+}
+.pos10 {
+  left: 23%;
+  top: 9%;
+}
+.pos11 {
+  left: 78%;
+  top: 6%;
+}
+.pos12 {
+  left: 8%;
+  top: 78%;
+}
+
+/* --------timer------- */
+
+#time_container {
+  position: absolute;
+  aspect-ratio: 16/1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#time {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+}
+.timer1 {
+  background-image: url(../graphics/timer4.svg);
+  position: absolute;
+}
+.timer2 {
+  background-image: url(../graphics/timer3.svg);
+  position: absolute;
+}
+.timer3 {
+  background-image: url(../graphics/timer2.svg);
+  position: absolute;
+}
+.timer4 {
+  background-image: url(../graphics/timer1.svg);
+  position: absolute;
+}
+
+/* ---------------score----------- */
+#score_board {
+  position: absolute;
+
+  background-size: cover;
+
+  top: 5%;
+  left: 2%;
+  width: 12%;
+  height: 105%;
+}
+.point0 {
+  background-image: url(../graphics/point.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.point1 {
+  background-image: url(../graphics/point1.svg);
+  position: absolute;
+}
+
+.point2 {
+  background-image: url(../graphics/point2.svg);
+  position: absolute;
+}
+.point3 {
+  background-image: url(../graphics/point3.svg);
+  position: absolute;
+}
+
+.point4 {
+  background-image: url(../graphics/point4.svg);
+  position: absolute;
+}
+
+.point5 {
+  background-image: url(../graphics/point5.svg);
+  position: absolute;
+}
+
+.point6 {
+  background-image: url(../graphics/point6.svg);
+  position: absolute;
+}
+
+.point7 {
+  background-image: url(../graphics/point7.svg);
+  position: absolute;
+}
+
+/* --------lives--------------- */
+
+.live0 {
+  background-image: url(../graphics/life0.svg);
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.live1 {
+  background-image: url(../graphics/life1.svg);
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.live2 {
+  background-image: url(../graphics/life2.svg);
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.live3 {
+  background-image: url(../graphics/life3.svg);
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+footer {
+  position: relative;
+  height: 100px;
+  width: 100vw;
+  padding: 4px;
+  left: -18%;
+}
